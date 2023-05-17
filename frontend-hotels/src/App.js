@@ -1,25 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import HotelCard from "./hotel/HotelCard";
 import SearchForm from "./search/SearchForm";
 import "./App.css";
 import io from "socket.io-client";
 
 const socket = io("http://localhost:3000");
-
 export default function App() {
   const [isConnected, setIsConnected] = useState(false);
+
+  const isConnectedRef = useRef(false);
   useEffect(() => {
-    socket.on("connect", () => {
-      console.log("Connected");
-      setIsConnected(true);
-    });
-  });
+    if (isConnectedRef.current === false) {
+      isConnectedRef.current = true;
+      socket.on("connect", () => {
+        setIsConnected(true);
+        console.log("Connected");
+      });
+    }
+  }, []);
 
   return <AppSearch isConnected={isConnected} />;
 }
 
 function AppSearch({ isConnected }) {
-  const [resultEvent, setResultEvent] = useState([]);
   const [results, setResults] = useState([]);
   const [searchQuery, setSearchQuery] = useState({
     ski_site: 1,
@@ -27,13 +30,20 @@ function AppSearch({ isConnected }) {
     to_date: "03/11/2024",
     group_size: 2,
   });
+  const initializedEventSearch = useRef(false);
+  const resultEvent = useRef([]);
+  const events = useRef([]);
   useEffect(() => {
-    socket.on("search-result", (data) => {
-      if (data) {
-        setResultEvent(data);
-      }
-      console.log("event", data);
-    });
+    if (initializedEventSearch.current === false) {
+      initializedEventSearch.current = true;
+      socket.on("search-result", (data) => {
+        resultEvent.current = data;
+        events.current = [...events.current, ...data];
+        setResults(events.current);
+        console.log("length_results", events.current.length);
+        console.log("event", data);
+      });
+    }
   }, []);
 
   const initializeSearch = () => {
@@ -45,14 +55,6 @@ function AppSearch({ isConnected }) {
     }
   };
 
-  useEffect(() => {
-    if (resultEvent.length > 0) {
-      const newResults = [...results, ...resultEvent];
-      setResults(newResults);
-      console.log("length_results", newResults.length);
-    }
-  }, [resultEvent]);
-
   return (
     <div className="App">
       <div className="Navigation-bar">
@@ -63,7 +65,7 @@ function AppSearch({ isConnected }) {
         />
       </div>
       <div>
-        {results
+        {events.current
           .sort(
             (a, b) =>
               parseFloat(a.PricesInfo.AmountAfterTax) -
