@@ -14,7 +14,13 @@ const HotelCard = ({ hotel }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageContainer}>
-        <img src={image} alt={name} className={styles.image} />
+        <img
+          src={image}
+          width={380}
+          height={230}
+          alt={name}
+          className={styles.image}
+        />
       </div>
       <div className={styles.infoContainer}>
         <div className={styles.name}>{name}</div>

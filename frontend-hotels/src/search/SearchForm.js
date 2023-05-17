@@ -1,4 +1,5 @@
-import "./SearchForm.css";
+import { Button, Stack, TextField } from "@mui/material";
+import SearchIcon from "./search.svg";
 
 const SearchForm = ({ searchQuery, setSearchQuery, initializeSearch }) => {
   const handleChange = (event) => {
@@ -16,61 +17,55 @@ const SearchForm = ({ searchQuery, setSearchQuery, initializeSearch }) => {
   };
 
   return (
-    <div className="search-form-container">
-      <form className="search-form" onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label className="input-label">
-            Ski Site:
-            <input
-              className="input-field"
-              type="number"
-              name="ski_site"
-              value={searchQuery.ski_site}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div className="input-container">
-          <label className="input-label">
-            From Date:
-            <input
-              className="input-field"
-              type="text"
-              name="from_date"
-              value={searchQuery.from_date}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div className="input-container">
-          <label className="input-label">
-            To Date:
-            <input
-              className="input-field"
-              type="text"
-              name="to_date"
-              value={searchQuery.to_date}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <div className="input-container">
-          <label className="input-label">
-            Group Size:
-            <input
-              className="input-field"
-              type="number"
-              name="group_size"
-              value={searchQuery.group_size}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-        <button className="search-button" type="submit">
+    <form onSubmit={handleSubmit}>
+      <Stack direction="row" spacing={2}>
+        <TextField
+          size="small"
+          id="SkiSite"
+          name="ski_site"
+          label="Ski Site"
+          type="number"
+          variant="outlined"
+          value={searchQuery.ski_site}
+          onChange={handleChange}
+        />
+
+        <TextField
+          size="small"
+          name="from_date"
+          id="from_date"
+          label="From Date"
+          variant="outlined"
+          value={searchQuery.from_date}
+          onChange={handleChange}
+        />
+        <TextField
+          size="small"
+          name="to_date"
+          label="To Date"
+          value={searchQuery.to_date}
+          onChange={handleChange}
+        />
+
+        <TextField
+          size="small"
+          label="Group Size"
+          type="number"
+          name="group_size"
+          value={searchQuery.group_size}
+          onChange={handleChange}
+        />
+
+        <Button
+          variant="outlined"
+          startIcon={<img src={SearchIcon} alt="search" />}
+          type="submit"
+          color="primary"
+        >
           Search
-        </button>
-      </form>
-    </div>
+        </Button>
+      </Stack>
+    </form>
   );
 };
 
