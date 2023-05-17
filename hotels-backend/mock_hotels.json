@@ -1,0 +1,110 @@
+{
+  "statusCode": 200,
+  "body": {
+    "success": "true",
+    "accommodations": [
+      {
+        "HotelCode": "PWCSTANIN",
+        "HotelName": "Chalet Nina",
+        "HotelDescriptiveContent": {
+          "Images": [
+            {
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/NIN_chalet-nina-3.jpg"
+            },
+            {
+              "MainImage": "True",
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/NIN_chalet-nina-4.jpg"
+            },
+            {
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/NIN_g-chalet-nina-0.jpg"
+            }
+          ]
+        },
+        "HotelInfo": {
+          "Position": {
+            "Latitude": "45.29690200",
+            "Longitude": "6.57577000",
+            "Distances": [
+              { "type": "ski_lift", "distance": "430m" },
+              { "type": "city_center", "distance": "230m" }
+            ]
+          },
+          "Rating": "3",
+          "Beds": "2"
+        },
+        "PricesInfo": {
+          "AmountAfterTax": "273.34",
+          "AmountBeforeTax": "263.34"
+        }
+      },
+      {
+        "HotelCode": "PWHSTABAN",
+        "HotelName": "Hotel Banyan",
+        "HotelDescriptiveContent": {
+          "Images": [
+            {
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/STABAN56_gallery-banyan.jpg"
+            },
+            {
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/DMHnTibmYW.jpeg"
+            },
+            {
+              "MainImage": "True",
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/STABAN56_G-banyan-breakfast-1.jpg"
+            }
+          ]
+        },
+        "HotelInfo": {
+          "Position": {
+            "Latitude": "46.933628",
+            "Longitude": "10.995235",
+            "Distances": [
+              { "type": "ski_lift", "distance": "240m" },
+              { "type": "city_center", "distance": "220m" }
+            ]
+          },
+          "Rating": "5",
+          "Beds": "4"
+        },
+        "PricesInfo": {
+          "AmountAfterTax": "328.34",
+          "AmountBeforeTax": "309.25"
+        }
+      },
+      {
+        "HotelCode": "PWHSTAPOS",
+        "HotelName": "Hotel Post St Anton",
+        "HotelDescriptiveContent": {
+          "Images": [
+            {
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/m5j_H55OCu.jpeg"
+            },
+            {
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/zHBGjiMzOl.jpeg"
+            },
+            {
+              "MainImage": "True",
+              "URL": "https://www.powderwhite.com/managed_images/properties/main_images/P6l9JPeG5x.jpeg"
+            }
+          ]
+        },
+        "HotelInfo": {
+          "Position": {
+            "Latitude": "46.933628",
+            "Longitude": "10.995235",
+            "Distances": [
+              { "type": "ski_lift", "distance": "180m" },
+              { "type": "city_center", "distance": "20m" }
+            ]
+          },
+          "Rating": "3",
+          "Beds": "2"
+        },
+        "PricesInfo": {
+          "AmountAfterTax": "129.54",
+          "AmountBeforeTax": "112.23"
+        }
+      }
+    ]
+  }
+}

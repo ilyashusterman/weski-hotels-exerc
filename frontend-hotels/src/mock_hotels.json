@@ -1,0 +1,281 @@
+[
+  {
+    "HotelCode": "PWAVTHTSP",
+    "HotelName": "Les Temples du Soleil Privé",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "MainImage": "True",
+          "URL": "https://i.travelapi.com/hotels/16000000/15400000/15395900/15395820/c6c377fa_z.jpg"
+        },
+        {
+          "URL": "https://i.travelapi.com/hotels/16000000/15400000/15395900/15395820/738adfdf_z.jpg"
+        },
+        {
+          "URL": "https://i.travelapi.com/hotels/16000000/15400000/15395900/15395820/93f89778_z.jpg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "45.29690200",
+        "Longitude": "6.57577000",
+        "Distances": [
+          { "type": "ski_lift", "distance": "50m" },
+          { "type": "city_center", "distance": "200m" }
+        ]
+      },
+      "Rating": "4",
+      "Beds": "4"
+    },
+    "PricesInfo": { "AmountAfterTax": "1145.84", "AmountBeforeTax": "1100.84" }
+  },
+  {
+    "HotelCode": "PWHMAYSIE",
+    "HotelName": "Hotel Pension Sieglerhof",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/j_R9g03pIP.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/hQeY2NyCkh.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/HBNEAWHUrN.jpeg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "45.29690200",
+        "Longitude": "6.57577000",
+        "Distances": [
+          { "type": "ski_lift", "distance": "430m" },
+          { "type": "city_center", "distance": "220m" }
+        ]
+      },
+      "Rating": "3",
+      "Beds": "2"
+    },
+    "PricesInfo": { "AmountAfterTax": "315.54", "AmountBeforeTax": "300.24" }
+  },
+  {
+    "HotelCode": "PWHMAYLAR",
+    "HotelName": "Gastehaus Larchenheim",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/PhqdoEo_Mb.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/Pr64803gC4.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/ka_yWTkJBy.jpeg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "45.29690200",
+        "Longitude": "6.57577000",
+        "Distances": [
+          { "type": "ski_lift", "distance": "500m" },
+          { "type": "city_center", "distance": "100m" }
+        ]
+      },
+      "Rating": "2",
+      "Beds": "4"
+    },
+    "PricesInfo": { "AmountAfterTax": "545.63", "AmountBeforeTax": "520.24" }
+  },
+  {
+    "HotelCode": "PWCSTANIN",
+    "HotelName": "Chalet Nina",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/NIN_chalet-nina-3.jpg"
+        },
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/NIN_chalet-nina-4.jpg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/NIN_g-chalet-nina-0.jpg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "45.29690200",
+        "Longitude": "6.57577000",
+        "Distances": [
+          { "type": "ski_lift", "distance": "430m" },
+          { "type": "city_center", "distance": "230m" }
+        ]
+      },
+      "Rating": "3",
+      "Beds": "2"
+    },
+    "PricesInfo": { "AmountAfterTax": "273.34", "AmountBeforeTax": "263.34" }
+  },
+  {
+    "HotelCode": "PWHSTABAN",
+    "HotelName": "Hotel Banyan",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/STABAN56_gallery-banyan.jpg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/DMHnTibmYW.jpeg"
+        },
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/STABAN56_G-banyan-breakfast-1.jpg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "46.933628",
+        "Longitude": "10.995235",
+        "Distances": [
+          { "type": "ski_lift", "distance": "240m" },
+          { "type": "city_center", "distance": "220m" }
+        ]
+      },
+      "Rating": "5",
+      "Beds": "4"
+    },
+    "PricesInfo": { "AmountAfterTax": "328.34", "AmountBeforeTax": "309.25" }
+  },
+  {
+    "HotelCode": "PWHSTAPOS",
+    "HotelName": "Hotel Post St Anton",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/m5j_H55OCu.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/zHBGjiMzOl.jpeg"
+        },
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/P6l9JPeG5x.jpeg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "46.933628",
+        "Longitude": "10.995235",
+        "Distances": [
+          { "type": "ski_lift", "distance": "180m" },
+          { "type": "city_center", "distance": "20m" }
+        ]
+      },
+      "Rating": "3",
+      "Beds": "2"
+    },
+    "PricesInfo": { "AmountAfterTax": "129.54", "AmountBeforeTax": "112.23" }
+  },
+  {
+    "HotelCode": "PWHOBGAUS",
+    "HotelName": "Hotel Austria and Bellevue",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/TL1890jKqv.jpeg"
+        },
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/2jMXWyQKkh.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/9D57zIo16n.jpeg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "45.29690200",
+        "Longitude": "6.57577000",
+        "Distances": [
+          { "type": "ski_lift", "distance": "100m" },
+          { "type": "city_center", "distance": "10m" }
+        ]
+      },
+      "Rating": "2",
+      "Beds": "4"
+    },
+    "PricesInfo": { "AmountAfterTax": "345.63", "AmountBeforeTax": "280.24" }
+  },
+  {
+    "HotelCode": "PWHSOLALM",
+    "HotelName": "Hotel Alm-Ferienclub Silbertal",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/uXIwHFIp1v.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/XIwHFIp1vA.jpeg"
+        },
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/ExEXtTY5wu.jpeg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "46.933628",
+        "Longitude": "10.995235",
+        "Distances": [
+          { "type": "ski_lift", "distance": "0m" },
+          { "type": "city_center", "distance": "120m" }
+        ]
+      },
+      "Rating": "4",
+      "Beds": "2"
+    },
+    "PricesInfo": { "AmountAfterTax": "445.23", "AmountBeforeTax": "440.97" }
+  },
+  {
+    "HotelCode": "PWHSOLPAJ",
+    "HotelName": "Hotel Pension Alpenheim Jorgele",
+    "HotelDescriptiveContent": {
+      "Images": [
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/mBGiIrhgkE.jpeg"
+        },
+        {
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/60D_od_URL.jpeg"
+        },
+        {
+          "MainImage": "True",
+          "URL": "https://www.powderwhite.com/managed_images/properties/main_images/akgbcMBZ7G.jpeg"
+        }
+      ]
+    },
+    "HotelInfo": {
+      "Position": {
+        "Latitude": "46.933628",
+        "Longitude": "10.995235",
+        "Distances": [
+          { "type": "ski_lift", "distance": "230m" },
+          { "type": "city_center", "distance": "520m" }
+        ]
+      },
+      "Rating": "5",
+      "Beds": "3"
+    },
+    "PricesInfo": { "AmountAfterTax": "873.34", "AmountBeforeTax": "845.23" }
+  }
+]

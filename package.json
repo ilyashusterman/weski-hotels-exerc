@@ -1,0 +1,33 @@
+{
+  "name": "weski-hotels",
+  "version": "1.0.0",
+  "description": "Upon opening the application, users should see a blank page with a search bar. The search bar",
+  "main": " contain the following filters (all fields are mandatory):",
+  "scripts": {
+    "test": "npx jest src/main.test.ts",
+    "start": "npx ts-node src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ilyashusterman/weski-hotels-exerc.git"
+  },
+  "author": "ilya shusterman",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/preset-env": "^7.21.5",
+    "@types/node": "^18.16.3",
+    "ts-node": "^10.9.1",
+    "types": "^0.1.1",
+    "typescript": "^5.0.4"
+  },
+  "bugs": {
+    "url": "https://github.com/ilyashusterman/weski-hotels-exerc/issues"
+  },
+  "homepage": "https://github.com/ilyashusterman/weski-hotels-exerc#readme",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.21.5",
+    "@jest/globals": "^29.5.0",
+    "@types/jest": "^29.5.1",
+    "ts-jest": "^29.1.0"
+  }
+}
