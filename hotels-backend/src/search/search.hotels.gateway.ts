@@ -16,19 +16,14 @@ export function observingResults(
   return new Observable((subscriber) => {
     let count = 0;
     results.map((promiseResult) => {
-      setTimeout(async () => {
-        const data = await promiseResult;
+      promiseResult.then((data) => {
         count += 1;
         subscriber.next(data);
-      }, 0);
+        if (count === results.length) {
+          subscriber.complete();
+        }
+      });
     });
-    let intervalId = null;
-    intervalId = setInterval(() => {
-      if (count === results.length) {
-        subscriber.complete();
-        clearInterval(intervalId);
-      }
-    }, 5000);
   });
 }
 
