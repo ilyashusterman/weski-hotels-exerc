@@ -7,6 +7,7 @@ const HotelCard = ({ hotel }) => {
   const image = HotelDescriptiveContent?.Images[0]?.URL;
   const priceAfterTax = PricesInfo?.AmountAfterTax;
   const rate = HotelInfo?.Rating;
+  const beds = HotelInfo?.Beds;
   const name = HotelName;
   const location = `${HotelInfo?.Position?.Distances[0]?.distance} from ski lift, ${HotelInfo?.Position?.Distances[1]?.distance} from city center`;
 
@@ -18,6 +19,7 @@ const HotelCard = ({ hotel }) => {
       <div className={styles.infoContainer}>
         <div className={styles.name}>{name}</div>
         <div className={styles.location}>{location}</div>
+        <div className={styles.location}>Beds: {beds}</div>
         <div className={styles.rate}>
           {rate} <i className="material-icons">star_rate</i>
         </div>

@@ -39,12 +39,16 @@ export default function AppSearch() {
   const initializeSearch = () => {
     if (isConnected) {
       console.log("Initialized search...");
+      events.current = [];
+      setResults(events.current);
       socket.emit("search", searchQuery);
     } else {
       console.error("Not Connected cant search");
     }
   };
-
+  const distinctValues = (array, key = "HotelCode") => {
+    return [...new Map(array.map((item) => [item[key], item])).values()];
+  };
   return (
     <div className="App">
       <div className="Navigation-bar">
@@ -55,7 +59,7 @@ export default function AppSearch() {
         />
       </div>
       <div>
-        {results
+        {distinctValues(results)
           .sort(
             (a, b) =>
               parseFloat(a.PricesInfo.AmountAfterTax) -

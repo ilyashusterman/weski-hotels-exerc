@@ -7,7 +7,7 @@ import {
 } from '@nestjs/websockets';
 import { map, Observable } from 'rxjs';
 import { Server } from 'socket.io';
-import { QueryBody } from './types';
+import { QueryBodyRaw, QueryBody } from './types';
 import { SearchHotelAPIFactory } from './api.implementations/factory';
 
 export function observingResults(
@@ -37,8 +37,14 @@ export class SearchHotelsGateway {
   server: Server;
 
   @SubscribeMessage('search')
-  findAll(@MessageBody() data: QueryBody): Observable<WsResponse<any>> {
-    const factory = SearchHotelAPIFactory.create('HotelsSimulatorAPI', data);
+  findAll(@MessageBody() data: QueryBodyRaw): Observable<WsResponse<any>> {
+    const query: QueryBody = {
+      group_size: parseInt(data.group_size),
+      ski_site: parseInt(data.ski_site),
+      to_date: data.to_date,
+      from_date: data.from_date,
+    };
+    const factory = SearchHotelAPIFactory.create('HotelsSimulatorAPI', query);
     const results = factory.getResults();
     return observingResults(results).pipe(
       map((item) => ({ event: 'search-result', data: item })),
