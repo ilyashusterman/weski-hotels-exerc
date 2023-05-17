@@ -27,8 +27,8 @@ export class SearchHotelsGateway {
       to_date: data.to_date,
       from_date: data.from_date,
     };
-    const factory = SearchHotelAPIFactory.create('HotelsSimulatorAPI', query);
-    const results = factory.getResults();
+    const api = SearchHotelAPIFactory.create('HotelsSimulatorAPI', query);
+    const results = api.getResults();
     return observingResults(results).pipe(
       map((item) => ({ event: 'search-result', data: item })),
     );
