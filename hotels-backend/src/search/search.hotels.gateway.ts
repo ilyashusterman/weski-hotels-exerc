@@ -25,8 +25,8 @@ export function observingResults(
     let intervalId = null;
     intervalId = setInterval(() => {
       if (count === results.length) {
-        clearInterval(intervalId);
         subscriber.complete();
+        clearInterval(intervalId);
       }
     }, 5000);
   });
