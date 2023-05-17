@@ -2,6 +2,10 @@
 
 This project consists of a backend and frontend implementation for searching hotels using the Weski API.
 
+## Dependencies
+
+1. should be node version 18 LTS
+
 ## Installation
 
 To run the backend server, follow these steps:
