@@ -10,23 +10,6 @@ import { Server } from 'socket.io';
 import { QueryBodyRaw, QueryBody } from './types';
 import { SearchHotelAPIFactory } from './api.implementations/factory';
 
-export function observingResults(
-  results: Array<PromiseLike<any>>,
-): Observable<unknown> {
-  return new Observable((subscriber) => {
-    let count = 0;
-    results.map((promiseResult) => {
-      promiseResult.then((data) => {
-        count += 1;
-        subscriber.next(data);
-        if (count === results.length) {
-          subscriber.complete();
-        }
-      });
-    });
-  });
-}
-
 @WebSocketGateway({
   cors: {
     origin: '*',
@@ -50,4 +33,21 @@ export class SearchHotelsGateway {
       map((item) => ({ event: 'search-result', data: item })),
     );
   }
+}
+
+export function observingResults(
+  results: Array<PromiseLike<any>>,
+): Observable<unknown> {
+  return new Observable((subscriber) => {
+    let count = 0;
+    results.map((promiseResult) => {
+      promiseResult.then((data) => {
+        count += 1;
+        subscriber.next(data);
+        if (count === results.length) {
+          subscriber.complete();
+        }
+      });
+    });
+  });
 }
