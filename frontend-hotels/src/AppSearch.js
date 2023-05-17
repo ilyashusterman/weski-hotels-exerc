@@ -5,24 +5,9 @@ import "./App.css";
 import io from "socket.io-client";
 
 const socket = io("http://localhost:3000");
-export default function App() {
+
+export default function AppSearch() {
   const [isConnected, setIsConnected] = useState(false);
-
-  const isConnectedRef = useRef(false);
-  useEffect(() => {
-    if (isConnectedRef.current === false) {
-      isConnectedRef.current = true;
-      socket.on("connect", () => {
-        setIsConnected(true);
-        console.log("Connected");
-      });
-    }
-  }, []);
-
-  return <AppSearch isConnected={isConnected} />;
-}
-
-function AppSearch({ isConnected }) {
   const [results, setResults] = useState([]);
   const [searchQuery, setSearchQuery] = useState({
     ski_site: 1,
@@ -30,14 +15,19 @@ function AppSearch({ isConnected }) {
     to_date: "03/11/2024",
     group_size: 2,
   });
+
   const initializedEventSearch = useRef(false);
-  const resultEvent = useRef([]);
   const events = useRef([]);
   useEffect(() => {
     if (initializedEventSearch.current === false) {
       initializedEventSearch.current = true;
+
+      socket.on("connect", () => {
+        setIsConnected(true);
+        console.log("Connected");
+      });
+
       socket.on("search-result", (data) => {
-        resultEvent.current = data;
         events.current = [...events.current, ...data];
         setResults(events.current);
         console.log("length_results", events.current.length);
@@ -65,7 +55,7 @@ function AppSearch({ isConnected }) {
         />
       </div>
       <div>
-        {events.current
+        {results
           .sort(
             (a, b) =>
               parseFloat(a.PricesInfo.AmountAfterTax) -
